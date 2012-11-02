@@ -19,7 +19,12 @@
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://github.com/jstree/jstree/blob/master/MIT-LICENSE.txt</url>
+            <url>https://github.com/vakata/jstree/blob/v.1.0/LICENSE-MIT</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>GPL</name>
+            <url>https://github.com/vakata/jstree/blob/v.1.0/LICENSE-GPL</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
