@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jstree</artifactId>
-    <version>1.0.0-3-SNAPSHOT</version>
+    <version>3.0.0-beta8-SNAPSHOT</version>
     <name>jstree</name>
     <description>WebJar for jstree</description>
     <url>http://webjars.org</url>
@@ -47,10 +47,10 @@
     <!-- Warning!!! This WebJar does not use a git tag in the upstream repo. -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jstree.version>1.0</jstree.version>
+        <jstree.version>3.0.0-beta8</jstree.version>
         <downloadUrl>https://github.com/vakata/jstree/archive</downloadUrl>
         <!-- Note that this version doesn't match the upstream -->
-        <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/1.0.0</destinationDir>
+        <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${jstree.version}</destinationDir>
     </properties>
 
     <dependencies>
@@ -75,7 +75,7 @@
                         </goals>
                         <configuration>
                             <url>${downloadUrl}</url>
-                            <fromFile>v.${jstree.version}.zip</fromFile>
+                            <fromFile>${jstree.version}.zip</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
                     </execution>
@@ -95,7 +95,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destinationDir}">
-                                    <fileset dir="${project.build.directory}/jstree-v.${jstree.version}/dist" />
+                                    <fileset dir="${project.build.directory}/jstree-${jstree.version}/dist" />
                                 </move>
                             </target>
                         </configuration>
