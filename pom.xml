@@ -51,13 +51,19 @@
         <downloadUrl>https://github.com/vakata/jstree/archive</downloadUrl>
         <!-- Note that this version doesn't match the upstream -->
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${jstree.version}</destinationDir>
+        <requirejs>
+            {
+                "paths": { "jstree": "jstree" },
+                "shim": { "jstree": [ "jquery" ] }
+            }
+        </requirejs>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
-            <version>1.8.2</version>
+            <version>1.11.1</version>
         </dependency>
     </dependencies>
 
@@ -95,7 +101,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destinationDir}">
-                                    <fileset dir="${project.build.directory}/jstree-${jstree.version}/dist" />
+                                    <fileset dir="${project.build.directory}/jstree-${jstree.version}/dist" excludes="libs/"/>
                                 </move>
                             </target>
                         </configuration>
