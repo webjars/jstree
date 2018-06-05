@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jstree</artifactId>
-    <version>3.3.4-SNAPSHOT</version>
+    <version>3.3.5-SNAPSHOT</version>
     <name>jstree</name>
     <description>WebJar for jstree</description>
     <url>http://webjars.org</url>
@@ -47,7 +47,7 @@
     <!-- Warning!!! This WebJar does not use a git tag in the upstream repo. -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jstree.version>3.3.3</jstree.version>
+        <jstree.version>3.3.5</jstree.version>
         <downloadUrl>https://github.com/vakata/jstree/archive</downloadUrl>
         <!-- Note that this version doesn't match the upstream -->
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${jstree.version}</destinationDir>
